@@ -43,13 +43,13 @@ I’m looking for an interesting and chalenging Front-end position, as well as a
 
 ### 2019-2020 
  
-  #### HTML Academy
+#### HTML Academy
   HTML5, CSS3, JavaScript
 
-  #### Udemy
+#### Udemy
   The Complete JavaScript Course (in process)  
 
-  #### RSSchool
+#### RSSchool
   Self-education
                                                        
 ### Education
