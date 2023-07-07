@@ -37,6 +37,8 @@ body {
   font-family: 'Roboto', sans-serif;
   color: inherit;
   font-size: 16px;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 /* Header */
@@ -101,7 +103,7 @@ body {
 
 .menu-icon-wrapper {
   position: absolute;
-  right: 60px;
+  right: 40px;
   top: 20%;
   transform: translateY(-50%);
   width: 30px;
@@ -157,6 +159,63 @@ body {
   transform: rotate(-45deg);
   top: 0;
   transition: top 0.2s linear, transform 0.2s ease-in 0.2s;
+}
+
+/* overlay */
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.692);
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.overlay-active {
+  visibility: visible;
+  opacity: 1;
+  height: 100vh;
+}
+
+/* nav */
+
+.nav {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  top: 0;
+  right: 0;
+  /* height: 200px; */
+  background-color: #fff;
+  transform: translateY(-100%);
+  transition: all .3s ease-in-out;
+  z-index: 10;
+  opacity: 0;
+  width: 100vw;
+}
+
+.nav__list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  margin: 0 auto;
+  padding: 45px 0;
+}
+
+.nav-open {
+  transform: translateY(0%);
+  opacity: 1;
+  overflow: hidden;
+  /* position: fixed; */
+  top: 0;
+  right: 0;
+  /* height: 200px; */
+
 }
 
 /* Main    main__left_block */
