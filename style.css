@@ -207,6 +207,14 @@ body {
   padding: 45px 0;
 }
 
+.nav__item {
+  transition: color .3s ease-in-out;
+}
+
+.nav__item:hover {
+  color: red;
+}
+
 .nav-open {
   transform: translateY(0%);
   opacity: 1;
