@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,6 +9,7 @@
   <link rel="stylesheet" href="normalize.css">
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
   <header class="header">
     <div class="container">
@@ -143,6 +145,35 @@
               </li>
             </ul>
           </div>
+
+          <section class="preview__code">
+            <h2 class="preview__code-title title">Preview code</h2>
+            <pre class="code">
+              <span class="code__bold">
+                const</span> scrollController = {
+                  scrollPosition: <span class="code__red">0</span>,
+                  disabledScroll() {
+                    scrollController.scrollPosition = <span class="code__green">window</span>.scrollY
+                    <span class="code__green">document</span>.body.style.cssText = <span class="code__red">`
+                    overflow: hidden;
+                    position: fixed;
+                    top: -<span class="code__grey">${scrollController.scrollPosition}</span>px;
+                    left: 0;
+                    height: 100vh;
+                    width: 100vw;
+                    padding: <span class="code__grey">${window.innerWidth - document.body.offsetWidth}</span>px;
+                    `</span>;
+                    <span class="code__green">document</span>.documentElement.style.scrollBehavior = <span class="code__red">'unset'</span>;
+                  },
+                  enabledScroll() {
+                    <span class="code__green" >document</span>.body.style.cssText = <span class="code__red">''</span>;
+                    <span class="code__green">window</span>.scroll({top: scrollController.scrollPosition});
+                    <span class="code__green">document</span>.documentElement.style.scrollBehavior = <span class="code__red">''</span>;
+                  },
+                }
+              </pre>
+          </section>
+
 
           <div class="main__project">
             <h2 class="main__project-title title">Completed projects</h2>
